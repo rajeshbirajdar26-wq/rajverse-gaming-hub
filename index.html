@@ -3,303 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101329">
-<title>RAJVERSE Gaming Hub</title>
+<meta name="theme-color" content="#10152b">
+<title>RAJVERSE ARCADE — Play. Beat. Repeat.</title>
 <style>
-:root {
-  --bg:#0c1020;
-  --panel:#171d35;
-  --panel2:#202846;
-  --text:#f4f6ff;
-  --muted:#aab3d0;
-  --accent:#8b7cff;
-  --cyan:#4de2d0;
-  --pink:#ff72b6;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;background:radial-gradient(ellipse at top,#25204d 0,#0c1020 48%);
-  color:var(--text);font-family:system-ui,-apple-system,sans-serif;
-  min-height:100vh
-}
-header{
-  padding:22px 18px;display:flex;align-items:center;
-  justify-content:space-between;gap:12px;flex-wrap:wrap;
-  max-width:1100px;margin:auto
-}
-.logo{font-size:23px;font-weight:900;letter-spacing:1px}
-.logo span{color:var(--cyan)}
-.badge{border:1px solid #ffffff25;padding:8px 12px;border-radius:30px;color:var(--cyan);font-size:12px}
-main{max-width:1100px;margin:auto;padding:10px 18px 55px}
-.hero{
-  padding:36px 24px;border:1px solid #ffffff19;border-radius:26px;
-  background:linear-gradient(125deg,#25244e,#171b35 60%,#12353d);
-  position:relative;overflow:hidden
-}
-.eyebrow{color:var(--cyan);font-weight:800;font-size:12px;letter-spacing:2px}
-h1{font-size:clamp(34px,8vw,62px);line-height:1.04;margin:14px 0}
-h1 span{color:var(--cyan)}
-p{color:var(--muted);line-height:1.6}
-.hero p{max-width:540px}
-.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.stat{padding:13px 17px;background:#090d20a8;border:1px solid #ffffff18;border-radius:15px;min-width:105px}
-.stat strong{display:block;font-size:22px}
-.stat small{color:var(--muted)}
-.section-title{margin:34px 0 15px;font-size:22px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
-.card{
-  background:linear-gradient(145deg,var(--panel2),var(--panel));
-  border:1px solid #ffffff18;border-radius:21px;padding:21px;
-  display:flex;flex-direction:column;align-items:flex-start
-}
-.icon{font-size:36px}
-.card h3{margin:12px 0 4px}
-.card p{font-size:14px;flex:1}
-button{
-  border:0;border-radius:12px;padding:12px 16px;font-weight:800;
-  cursor:pointer;background:var(--accent);color:white;font-size:14px
-}
-button:active{transform:scale(.98)}
-button.secondary{background:#ffffff12;border:1px solid #ffffff24}
-.card button{width:100%;margin-top:12px}
-button:disabled{opacity:.55;cursor:not-allowed}
-.progress-wrap{height:8px;background:#ffffff12;border-radius:20px;overflow:hidden;margin:15px 0}
-#progressBar{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--cyan));transition:width .2s}
-.game-area{margin-top:24px;display:none}
-.game-panel{padding:22px;background:#10162b;border:1px solid #ffffff20;border-radius:22px}
-.game-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-#gameContent{text-align:center;padding:22px 0}
-#gameContent h2{font-size:25px}
-.memory-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:380px;margin:20px auto}
-.tile{
-  min-height:62px;border-radius:12px;background:#252d4e;
-  border:1px solid #ffffff20;font-size:26px;padding:4px
-}
-.tile.open{background:#32305e}
-.tile.matched{background:#124c49;border-color:var(--cyan)}
-.big-button{font-size:17px;padding:16px 24px;min-width:190px}
-#reactionBox{
-  display:flex;align-items:center;justify-content:center;
-  min-height:190px;border-radius:18px;background:#242b49;
-  font-size:21px;font-weight:800;margin:18px 0;padding:20px
-}
-#reactionBox.waiting{background:#8c314f}
-#reactionBox.ready{background:#087e70}
-#reactionBox.result{background:#3d326e}
-.note{font-size:12px;color:var(--muted)}
-footer{text-align:center;padding:25px 15px;border-top:1px solid #ffffff15;color:var(--muted);font-size:13px}
-@media(max-width:480px){
- header{padding:18px 14px}main{padding:8px 14px 40px}
- .hero{padding:28px 18px}.memory-grid{gap:6px}
- .tile{min-height:55px;font-size:23px}
-}
+:root{--bg:#0c1020;--panel:#151c34;--panel2:#1b2542;--text:#f4f6ff;--muted:#aab4d0;--cyan:#66e3ff;--pink:#ff76c8;--lime:#c7ff76;--gold:#ffd36e}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1b2850 0,#0c1020 55%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}
+header{max-width:1150px;margin:auto;padding:24px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:950;font-size:1.25rem;letter-spacing:1.5px}.brand span{color:var(--cyan)}.pill{border:1px solid #ffffff24;border-radius:999px;padding:8px 13px;color:var(--muted);font-size:.85rem}
+.hero{max-width:1150px;margin:20px auto 30px;padding:30px 20px 45px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:28px}.eyebrow{color:var(--lime);font-weight:800;letter-spacing:2px;font-size:.78rem}.hero h1{font-size:clamp(2.5rem,7vw,5rem);line-height:.98;letter-spacing:-2px;margin:15px 0}.hero h1 span{color:var(--cyan)}.hero p{color:var(--muted);font-size:1.05rem;max-width:580px;line-height:1.7}.hero-art{min-height:240px;border-radius:30px;background:linear-gradient(145deg,#253c72,#201b49 60%,#542958);border:1px solid #ffffff22;display:grid;place-items:center;position:relative;overflow:hidden}.orb{font-size:7rem;filter:drop-shadow(0 10px 25px #66e3ff55);animation:float 3s ease-in-out infinite}.spark{position:absolute;font-size:2rem;animation:float 4s ease-in-out infinite}.s1{top:20px;left:25px}.s2{bottom:25px;right:30px;animation-delay:1s}.s3{top:35px;right:35px;animation-delay:.5s}@keyframes float{50%{transform:translateY(-12px) rotate(4deg)}}
+.stats{max-width:1110px;margin:0 auto 32px;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{background:#ffffff08;border:1px solid #ffffff12;border-radius:18px;padding:16px}.stat strong{display:block;font-size:1.35rem}.stat small{color:var(--muted)}
+main{max-width:1150px;margin:auto;padding:0 20px 50px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:25px 0 18px}.section-head h2{margin:0;font-size:1.7rem}.section-head p{margin:6px 0 0;color:var(--muted)}.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}.filter{border:1px solid #ffffff20;background:#ffffff08;color:var(--muted);padding:9px 13px;border-radius:999px}.filter.active{background:var(--cyan);color:#081322;border-color:var(--cyan);font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.game{background:linear-gradient(160deg,#1b2542,#12182d);border:1px solid #ffffff16;border-radius:22px;padding:17px;min-height:215px;display:flex;flex-direction:column;transition:.2s;position:relative;overflow:hidden}.game:hover{transform:translateY(-5px);border-color:#66e3ff80;box-shadow:0 15px 35px #0003}.game .emoji{font-size:2.5rem}.tag{position:absolute;right:13px;top:14px;color:var(--lime);font-size:.68rem;font-weight:800;letter-spacing:1px}.game h3{margin:13px 0 5px}.game p{color:var(--muted);font-size:.87rem;line-height:1.5;margin:0 0 14px}.game-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}.best{font-size:.76rem;color:var(--muted)}.play{border:0;border-radius:11px;background:var(--cyan);color:#091323;padding:9px 13px;font-weight:900}.play:hover{filter:brightness(1.08)}
+.challenge{margin-top:32px;padding:22px;border:1px solid #ffffff18;border-radius:22px;background:linear-gradient(110deg,#24204b,#16334a)}.challenge h2{margin:0 0 8px}.challenge p{color:var(--muted);margin:0 0 15px}.challenge button{background:var(--lime);border:0;border-radius:12px;padding:11px 15px;font-weight:900;color:#111827}.notice{font-size:.8rem;color:var(--muted);margin-top:16px;line-height:1.6}footer{text-align:center;color:var(--muted);padding:25px 20px;border-top:1px solid #ffffff10;font-size:.85rem}
+.overlay{position:fixed;inset:0;background:#050814eF;z-index:10;display:none;align-items:center;justify-content:center;padding:15px;overflow:auto}.overlay.show{display:flex}.modal{width:min(620px,100%);background:#151c34;border:1px solid #ffffff20;border-radius:24px;padding:22px;box-shadow:0 25px 80px #0009;max-height:90vh;overflow:auto}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.modal-head h2{margin:0}.close{background:#ffffff12;border:1px solid #ffffff22;color:white;border-radius:10px;padding:8px 12px}.game-area{padding:18px 0;text-align:center}.game-area p{color:var(--muted)}.big{font-size:2.5rem;font-weight:950;margin:15px}.action{border:0;border-radius:12px;background:var(--cyan);padding:12px 18px;font-weight:900;color:#081323;margin:5px}.secondary{background:#ffffff12;color:var(--text);border:1px solid #ffffff22}.board{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:370px;margin:18px auto}.tile{aspect-ratio:1;border:1px solid #ffffff22;border-radius:13px;background:#263557;color:white;font-size:1.6rem;font-weight:800}.tile.open{background:#214e63}.tile.matched{background:#294c38;border-color:#8ee7a7}.ttt{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:300px;margin:18px auto}.ttt button{aspect-ratio:1;font-size:2rem;border-radius:12px;border:1px solid #ffffff20;background:#263557;color:white}.pong-wrap{display:flex;justify-content:center}.pong-wrap canvas{width:min(100%,460px);height:auto;background:#080d1b;border:1px solid #ffffff20;border-radius:12px}.snake-wrap canvas{width:min(100%,360px);height:auto;background:#080d1b;border:1px solid #ffffff20;border-radius:12px}.field{background:#0d1326;border:1px solid #ffffff22;color:white;border-radius:12px;padding:12px;width:min(250px,100%);font-size:1.1rem;text-align:center}.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;max-width:280px;margin:15px auto}.keypad button{padding:12px;border:1px solid #ffffff20;border-radius:10px;background:#263557;color:white;font-weight:8
+00}.result{font-weight:800;color:var(--lime);min-height:25px}.hidden{display:none!important}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr}.hero-art{min-height:190px}.orb{font-size:5.5rem}}@media(max-width:440px){header{padding:18px 15px}.hero{padding:20px 15px 28px}.stats{padding:0 15px}.grid{gap:10px}.game{padding:13px;min-height:225px}.game .emoji{font-size:2rem}.game h3{font-size:1rem}.game p{font-size:.82rem}.section-head{display:block}.section-head .pill{display:inline-block;margin-top:10px}}
 </style>
 </head>
 <body>
-<header>
-  <div class="logo">RAJ<span>VERSE</span> 🎮</div>
-  <div class="badge">● GAMING HUB</div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="eyebrow">PLAY • IMPROVE • REPEAT</div>
-    <h1>Your game.<br>Your <span>universe.</span></h1>
-    <p>Challenge your brain, test your reflexes and beat your personal best. Your scores are saved in this browser.</p>
-    <div class="stats">
-      <div class="stat"><strong id="gamesPlayed">0</strong><small>Games played</small></div>
-      <div class="stat"><strong id="totalScore">0</strong><small>Total points</small></div>
-      <div class="stat"><strong id="bestReaction">—</strong><small>Best reaction</small></div>
-    </div>
-  </section>
-
-  <h2 class="section-title">⚡ Choose your challenge</h2>
-  <section class="grid">
-    <article class="card">
-      <div class="icon">🧠</div>
-      <h3>Memory Match</h3>
-      <p>Find matching emoji pairs using your memory. Fewer moves mean a better result.</p>
-      <button onclick="startMemory()">Play Memory</button>
-    </article>
-    <article class="card">
-      <div class="icon">⚡</div>
-      <h3>Reaction Test</h3>
-      <p>Wait for green, then tap quickly. Tapping too early means a false start!</p>
-      <button onclick="startReaction()">Test Reflexes</button>
-    </article>
-    <article class="card">
-      <div class="icon">🏆</div>
-      <h3>Your Achievements</h3>
-      <p id="achievementText">Play a game to begin unlocking achievements.</p>
-      <button class="secondary" onclick="showAchievements()">View Achievements</button>
-    </article>
-  </section>
-
-  <section class="game-area" id="gameArea">
-    <div class="game-panel">
-      <div class="game-top">
-        <strong id="gameTitle">Game</strong>
-        <button class="secondary" onclick="closeGame()">✕ Close</button>
-      </div>
-      <div id="gameContent"></div>
-    </div>
-  </section>
-
-  <h2 class="section-title">📈 Your progress</h2>
-  <section class="card">
-    <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
-      <strong>Gaming journey</strong>
-      <span id="progressLabel" class="note">0% started</span>
-    </div>
-    <div class="progress-wrap"><div id="progressBar"></div></div>
-    <p id="progressMessage">Play your first game to start your journey.</p>
-    <button class="secondary" onclick="resetProgress()">Reset saved progress</button>
-    <p class="note">Progress is saved locally in this browser. Clearing browser data or using another device may remove or not show your saved scores.</p>
-  </section>
-</main>
-
-<footer>© RAJVERSE • Built for fun, focus and friendly competition.</footer>
-
+<header><a class="brand" href="#"><span>RAJ</span>VERSE <span>ARCADE</span></a><div class="pill">🎮 8 GAMES • FREE TO PLAY</div></header>
+<section class="hero"><div><div class="eyebrow">YOUR NEXT HIGH SCORE STARTS HERE</div><h1>PLAY HARD.<br><span>BEAT YOUR</span><br>BEST.</h1><p>Quick challenges, brain teasers and friendly face-offs. Pick a game, set a record, then try to beat it.</p><a href="#games"><button class="action">Explore Games ↓</button></a></div><div class="hero-art"><span class="spark s1">✦</span><span class="spark s2">⚡</span><span class="spark s3">✧</span><div class="orb">🎮</div></div></section>
+<section class="stats"><div class="stat"><strong id="played">0</strong><small>Games played on this device</small></div><div class="stat"><strong id="records">0</strong><small>Personal records saved</small></div><div class="stat"><strong id="points">0</strong><small>Arcade points</small></div></section>
+<main id="games"><div class="section-head"><div><h2>Choose your game</h2><p>Eight games. One mission: beat your best.</p></div><div class="pill">🏆 Your records save on this device</div></div><div class="filters"><button class="filter active" data-filter="all">All Games</button><button class="filter" data-filter="brain">🧠 Brain</button><button class="filter" data-filter="action">⚡ Action</button><button class="filter" data-filter="duel">👥 2 Player</button></div>
+<div class="grid">
+<article class="game" data-category="brain"><span class="tag">BRAIN</span><div class="emoji">🧠</div><h3>Memory Match</h3><p>Flip cards, find matching pairs and finish in fewer moves.</p><div class="game-foot"><span class="best" id="best-memory">Best: —</span><button class="play" onclick="launch('memory')">Play →</button></div></article>
+<article class="game" data-category="action"><span class="tag">SPEED</span><div class="emoji">⚡</div><h3>Reaction Test</h3><p>Wait for green, then tap as fast as you can. No false starts!</p><div class="game-foot"><span class="best" id="best-reaction">Best: —</span><button class="play" onclick="launch('reaction')">Play →</button></div></article>
+<article class="game" data-category="duel"><span class="tag">2 PLAYER</span><div class="emoji">❌⭕</div><h3>Tic-Tac-Toe</h3><p>Challenge a friend on the same phone. Three in a row wins.</p><div class="game-foot"><span class="best" id="best-ttt">Wins: 0</span><button class="play" onclick="launch('ttt')">Play →</button></div></article>
+<article class="game" data-category="action"><span class="tag">ARCADE</span><div class="emoji">🏓</div><h3>Pong</h3><p>Keep the ball alive. Move your paddle with your finger or mouse.</p><div class="game-foot"><span class="best" id="best-pong">Best: —</span><button class="play" onclick="launch('pong')">Play →</button></div></article>
+<article class="game" data-category="action"><span class="tag">ARCADE</span><div class="emoji">🐍</div><h3>Snake</h3><p>Eat the dots, grow longer and avoid crashing into yourself.</p><div class="game-foot"><span class="best" id="best-snake">Best: —</span><button class="play" onclick="launch('snake')">Play →</button></div></article>
+<article class="game" data-category="brain"><span class="tag">LOGIC</span><div class="emoji">🎯</div><h3>Number Guess</h3><p>Find the secret number from 1 to 100 in as few tries as possible.</p><div class="game-foot"><span class="best" id="best-guess">Best: —</span><button class="play" onclick="launch('guess')">Play →</button></div></article>
+<article class="game" data-category="brain"><span class="tag">QUICK THINK</span><div class="emoji">➗</div><h3>Quick Math</h3><p>Solve as many sums as you can before the 30-second timer ends.</p><div class="game-foot"><span class="best" id="best-math">Best: —</span><button class="play" onclick="launch('math')">Play →</button></div></article>
+<article class="game" data-category="duel"><span class="tag">CHALLENGE</span><div class="emoji">🪨</div><h3>Rock Paper Scissors</h3><p>Play a quick best-of-five against the arcade opponent.</p><div class="game-foot"><span class="best" id="best-rps">Wins: 0</span><button class="play" onclick="launch('rps')">Play →</button></div></article>
+</div>
+<div class="challenge"><h2>🔥 Daily mini-challenge</h2><p>Try Quick Math today and score at least 10 points. Can you do it?</p><button onclick="launch('math')">Take the challenge</button><div class="notice">Your scores are saved locally in this browser on this device. This version does not yet have a shared online leaderboard.</div></div>
+</main><footer>Made for curious minds and friendly rivals • RAJVERSE ARCADE</footer>
+<div class="overlay" id="overlay"><div class="modal"><div class="modal-head"><h2 id="modalTitle">Game</h2><button class="close" onclick="closeGame()">✕ Close</button></div><div id="gameArea" class="game-area"></div></div></div>
 <script>
-const STORE_KEY = "rajverseGamingProgressV1";
-const defaultData = {
-  gamesPlayed:0,totalScore:0,bestReaction:null,
-  memoryBest:null,achievements:[]
-};
-let data;
-try {
-  data = {...defaultData,...JSON.parse(localStorage.getItem(STORE_KEY) || "{}")};
-  if(!Array.isArray(data.achievements)) data.achievements=[];
-} catch(e) {
-  data={...defaultData};
-}
-function save(){
-  try{localStorage.setItem(STORE_KEY,JSON.stringify(data));}
-  catch(e){alert("Browser storage is unavailable. Your progress may not save.");}
-  renderStats();
-}
-function renderStats(){
-  document.getElementById("gamesPlayed").textContent=data.gamesPlayed;
-  document.getElementById("totalScore").textContent=data.totalScore;
-  document.getElementById("bestReaction").textContent=data.bestReaction===null?"—":data.bestReaction+" ms";
-  const pct=Math.min(100,data.gamesPlayed*10);
-  document.getElementById("progressBar").style.width=pct+"%";
-  document.getElementById("progressLabel").textContent=pct+"% started";
-  document.getElementById("progressMessage").textContent=
-    data.gamesPlayed===0?"Play your first game to start your journey.":
-    "Great work! You have completed "+data.gamesPlayed+" game session(s). Keep improving your best scores.";
-  document.getElementById("achievementText").textContent=
-    data.achievements.length?data.achievements.join(" • "):"Play a game to begin unlocking achievements.";
-}
-function award(name,points){
-  data.gamesPlayed++;
-  data.totalScore+=points;
-  if(!data.achievements.includes(name))data.achievements.push(name);
-  save();
-}
-function openGame(title,html){
-  document.getElementById("gameArea").style.display="block";
-  document.getElementById("gameTitle").textContent=title;
-  document.getElementById("gameContent").innerHTML=html;
-  document.getElementById("gameArea").scrollIntoView({behavior:"smooth",block:"start"});
-}
-function closeGame(){
-  clearTimeout(reactionTimer);
-  document.getElementById("gameArea").style.display="none";
-}
-let memoryDeck=[],firstTile=null,lockBoard=false,matches=0,moves=0;
-function startMemory(){
-  clearTimeout(reactionTimer);
-  const emojis=["🐼","🚀","🎮","🦊","⭐","🎧","🐸","💎"];
-  memoryDeck=[...emojis,...emojis].sort(()=>Math.random()-.5);
-  firstTile=null;lockBoard=false;matches=0;moves=0;
-  openGame("🧠 Memory Match",`
-    <p>Match all 8 pairs. Moves: <strong id="moves">0</strong></p>
-    <div class="memory-grid" id="memoryGrid"></div>
-    <p id="memoryMessage">Tap any card to reveal it.</p>
-    <button onclick="startMemory()">Restart game</button>
-  `);
-  const grid=document.getElementById("memoryGrid");
-  memoryDeck.forEach((emoji,i)=>{
-    const b=document.createElement("button");
-    b.className="tile";b.textContent="❔";b.dataset.index=i;
-    b.setAttribute("aria-label","Hidden card");
-    b.onclick=()=>flipTile(b,emoji);
-    grid.appendChild(b);
-  });
-}
-function flipTile(button,emoji){
-  if(lockBoard||button.classList.contains("matched")||button===firstTile)return;
-  button.textContent=emoji;button.classList.add("open");
-  if(!firstTile){firstTile=button;return;}
-  moves++;document.getElementById("moves").textContent=moves;
-  if(firstTile.textContent===button.textContent){
-    firstTile.classList.add("matched");button.classList.add("matched");
-    firstTile.disabled=true;button.disabled=true;firstTile=null;matches++;
-    if(matches===8){
-      const points=Math.max(20,120-moves*3);
-      if(data.memoryBest===null||moves<data.memoryBest)data.memoryBest=moves;
-      award("Memory Master",points);
-      document.getElementById("memoryMessage").textContent="🎉 You won! "+moves+" moves. +"+points+" points!";
-    }
-  }else{
-    lockBoard=true;const previous=firstTile;firstTile=null;
-    setTimeout(()=>{
-      previous.textContent="❔";button.textContent="❔";
-      previous.classList.remove("open");button.classList.remove("open");
-      lockBoard=false;
-    },750);
-  }
-}
-let reactionTimer=null,reactionStart=0,reactionState="idle";
-function startReaction(){
-  clearTimeout(reactionTimer);reactionState="idle";
-  openGame("⚡ Reaction Test",`
-    <p>Wait for the box to turn green. Then tap it as fast as you can.</p>
-    <div id="reactionBox">Tap START to begin</div>
-    <button id="reactionButton" class="big-button" onclick="reactionAction()">START</button>
-    <p id="reactionMessage" class="note">Don't tap early!</p>
-  `);
-}
-function reactionAction(){
-  const box=document.getElementById("reactionBox");
-  const btn=document.getElementById("reactionButton");
-  const msg=document.getElementById("reactionMessage");
-  if(!box||!btn)return;
-  if(reactionState==="idle"||reactionState==="done"){
-    reactionState="waiting";box.className="waiting";box.textContent="Wait for green…";
-    btn.textContent="WAIT…";msg.textContent="Don't tap yet!";
-    reactionTimer=setTimeout(()=>{
-      if(reactionState!=="waiting")return;
-      reactionState="ready";reactionStart=performance.now();
-      box.className="ready";box.textContent="TAP NOW!";
-      btn.textContent="TAP NOW!";
-    },1000+Math.random()*3000);
-  }else if(reactionState==="waiting"){
-    clearTimeout(reactionTimer);reactionState="done";
-    box.className="result";box.textContent="Too early!";
-    btn.textContent="TRY AGAIN";msg.textContent="Wait for green next time.";
-  }else if(reactionState==="ready"){
-    const ms=Math.round(performance.now()-reactionStart);
-    reactionState="done";box.className="result";box.textContent=ms+" ms";
-    btn.textContent="TRY AGAIN";
-    msg.textContent=ms<250?"Lightning reflexes!":ms<400?"Nice reaction!":"Keep practising!";
-    if(data.bestReaction===null||ms<data.bestReaction)data.bestReaction=ms;
-    award("Reflex Challenger",Math.max(5,Math.round(500/ms*20)));
-  }
-}
-function showAchievements(){
-  const list=data.achievements.length?data.achievements.map(x=>"🏅 "+x).join("<br>"):"No achievements yet. Play a game to unlock your first badge!";
-  openGame("🏆 Achievements",`<p>${list}</p><button onclick="closeGame()">Back to hub</button>`);
-}
-function resetProgress(){
-  if(!confirm("Reset all locally saved Gaming Hub progress? This cannot be undone."))return;
-  clearTimeout(reactionTimer);
-  data={...defaultData,achievements:[]};
-  try{localStorage.removeItem(STORE_KEY);}catch(e){}
-  save();closeGame();
-}
-renderStats();
+const $=id=>document.getElementById(id);let played=+(localStorage.arcPlayed||0),points=+(localStorage.arcPoints||0),timer=null,cleanup=null;
+function get(k){return localStorage['arc_'+k]||''}function setBest(k,v){localStorage['arc_'+k]=v;refresh()}function finish(score=0){played++;points+=Math.max(0,score);localStorage.arcPlayed=played;localStorage.arcPoints=points;refresh()}
+function refresh(){$('played').textContent=played;$('points').textContent=points;let rec=['memory','reaction','pong','snake','guess','math'].filter(k=>get(k)!=='').length+(['ttt','rps'].filter(k=>get(k)!=='').length);$('records').textContent=rec;
+$('best-memory').textContent=get('memory')?`Best: ${get('memory')} moves`:'Best: —';$('best-reaction').textContent=get('reaction')?`Best: ${get('reaction')} ms`:'Best: —';$('best-pong').textContent=get('pong')?`Best: ${get('pong')} pts`:'Best: —';$('best-snake').textContent=get('snake')?`Best: ${get('snake')}`:'Best: —';$('best-guess').textContent=get('guess')?`Best: ${get('guess')} tries`:'Best: —';$('best-math').textContent=get('math')?`Best: ${get('math')} pts`:'Best: —';$('best-ttt').textContent=`Wins: ${get('ttt')||0}`;$('best-rps').textContent=`Wins: ${get('rps')||0}`}
+document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.game').forEach(g=>g.classList.toggle('hidden',b.dataset.filter!=='all'&&g.dataset.category!==b.dataset.filter))});
+function openGame(title,html){$('modalTitle').textContent=title;$('gameArea').innerHTML=html;$('overlay').classList.add('show')}function closeGame(){if(timer){clearTimeout(timer);clearInterval(timer);timer=null}if(cleanup){cleanup();cleanup=null}$('overlay').classList.remove('show');$('gameArea').innerHTML='';refresh()}
+function launch(k){if(timer){clearTimeout(timer);clearInterval(timer);timer=null}if(cleanup){cleanup();cleanup=null}({memory, reaction, ttt, pong, snake, guess, math, rps}[k])()}
+function memory(){let vals=['🍒','🍋','🍇','🍉','⭐','🌙','🚀','🎲'];vals=[...vals,...vals].sort(()=>Math.random()-.5);let open=[],matched=new Set(),moves=0,lock=false;openGame('🧠 Memory Match',`<p>Find all 8 pairs. Fewer moves = better score.</p><div class="result" id="mstat">Moves: 0 • Pairs: 0/8</div><div class="board" id="board">${vals.map((v,i)=>`<button class="tile" data-i="${i}">?</button>`).join('')}</div><button class="action secondary" onclick="launch('memory')">Restart</button>`);document.querySelectorAll('.tile').forEach(b=>b.onclick=()=>{let i=+b.dataset.i;if(lock||matched.has(i)||open.includes(i))return;b.textContent=vals[i];b.classList.add('open');open.push(i);if(open.length===2){moves++;if(vals[open[0]]===vals[open[1]]){open.forEach(n=>{matched.add(n);document.querySelector(`[data-i="${n}"]`).classList.add('matched')});open=[]}else{lock=true;setTimeout(()=>{open.forEach(n=>{let t=document.querySelector(`[data-i="${n}"]`);if(t){t.textContent='?';t.classList.remove('open')}});open=[];lock=false},650)}$('mstat').textContent=`Moves: ${moves} • Pairs: ${matched.size/2}/8`;if(matched.size===16){let old=+(get('memory')||999);if(moves<old)setBest('memory',moves);finish(Math.max(10,100-moves));$('mstat').textContent=`🎉 You won in ${moves} moves!`}}})}
+function reaction(){let state='wait',start=0;openGame('⚡ Reaction Test',`<p>Tap only when the box turns green. Wait for it…</p><button id="reactBox" class="action" style="width:100%;min-height:190px;background:#9b3449;color:white;font-size:1.4rem">Tap to start</button><div class="result" id="rstat"></div>`);let box=$('reactBox');box.onclick=()=>{if(state==='wait'){state='ready';box.textContent='Wait for GREEN…';box.style.background='#9b3449';timer=setTimeout(()=>{state='go';start=performance.now();box.textContent='TAP NOW!';box.style.background='#247b4a'},1200+Math.random()*2600)}else if(state==='ready'){clearTimeout(timer);state='wait';box.textContent='Too soon! Tap to try again';box.style.background='#9b3449';$('rstat').textContent='False start!'}else if(state==='go'){let ms=Math.round(performance.now()-start);state='wait';box.textContent=`${ms} ms — tap to retry`;box.style.background='#244a77';$('rstat').textContent=ms<250?'Lightning fast!':ms<350?'Nice reaction!':'Try to beat that time!';let old=+(get('reaction')||99999);if(ms<old)setBest('reaction',ms);finish(Math.max(1,Math.round(500/ms*100)))}}}
+function ttt(){let cells=Array(9).fill(''),turn='X',over=false;openGame('❌⭕ Tic-Tac-Toe',`<p>Two players on the same phone. X starts.</p><div class="result" id="ttstat">Player X's turn</div><div class="ttt" id="tttboard">${cells.map((_,i)=>`<button data-i="${i}"></button>`).join('')}</div><button class="action secondary" onclick="launch('ttt')">New match</button>`);const wins=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];document.querySelectorAll('#tttboard button').forEach(b=>b.onclick=()=>{let i=+b.dataset.i;if(over||cells[i])return;cells[i]=turn;b.textContent=turn;let won=wins.some(w=>w.every(n=>cells[n]===turn));if(won){over=true;$('ttstat').textContent=`🎉 Player ${turn} wins!`;if(turn==='X')setBest('ttt',+(get('ttt')||0)+1);finish(10)}else if(cells.every(Boolean)){over=true;$('ttstat').textContent='Draw! Good game.';finish(2)}else{turn=turn==='X'?'O':'X';$('ttstat').textContent=`Player ${turn}'s turn`}})}
+function guess(){let n=1+Math.floor(Math.random()*100),tries=0;openGame('🎯 Number Guess',`<p>Secret number is between 1 and 100.</p><input id="guessIn" class="field" type="number" min="1" max="100" placeholder="Enter a number"><button class="action" id="guessBtn">Guess</button><div class="result" id="gstat">Attempts: 0</div><button class="action secondary" onclick="launch('guess')">New number</button>`);$('guessBtn').onclick=()=>{let v=+$('guessIn').value;if(v<1||v>100||!Number.isInteger(v)){$('gstat').textContent='Enter a whole number from 1 to 100.';return}tries++;$('gstat').textContent=v===n?`🎉 Correct! It was ${n}. Attempts: ${tries}`:v<n?'Too low — go higher!':'Too high — go lower!';if(v===n){let old=+(get('guess')||999);if(tries<old)setBest('guess',tries);finish(Math.max(5,100-tries*8));$('guessBtn').disabled=true}}}
+function math(){let score=0,answered=false,ends=Date.now()+30000;function q(){let a=Math.floor(Math.random()*20)+1,b=Math.floor(Math.random()*20)+1,op=['+','−','×'][Math.floor(Math.random()*3)],ans=op==='+'?a+b:op==='−'?a-b:a*b;return {text:`${a} ${op} ${b}`,ans}}let cur=q();openGame('➗ Quick Math',`<p>30 seconds. Get as many right as possible!</p><div class="result" id="mTimer">30 seconds left</div><div class="big" id="mathQ">${cur.text} = ?</div><input id="mathIn" class="field" type="number" placeholder="Your answer"><button class="action" id="mathSubmit">Submit</button><div class="result" id="mathStat">Score: 0</div>`);function submit(){if(answered)return;let val=+$('mathIn').value;if(val===cur.ans){score++;$('mathStat').textContent=`Score: ${score} • Nice!`}else $('mathStat').textContent=`Not quite — answer was ${cur.ans}. Score: ${score}`;cur=q();$('mathQ').textContent=cur.text+' = ?';$('mathIn').value='';$('mathIn').focus()}$('mathSubmit').onclick=submit;$('mathIn').onkeydown=e=>{if(e.key==='Enter')submit()};timer=setInterval(()=>{let left=Math.max(0,Math.ceil((ends-Date.now())/1000));$('mTimer').textContent=`${left} seconds left`;if(left<=0){clearInterval(timer);timer=null;answered=true;$('mathSubmit').disabled=true;$('mathStat').textContent=`Time up! Final score: ${score}`;let old=+(get('math')||0);if(score>old)setBest('math',score);finish(score*5)}},250)}
+function rps(){let wins=0,loss=0,round=0;openGame('🪨 Rock Paper Scissors',`<p>Best of five — first to 3 wins.</p><div class="result" id="rpsstat">You 0 — 0 Arcade</div><div id="rpsmsg">Choose your move!</div><div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:18px 0"><button class="action" onclick="rpsMove('Rock')">🪨 Rock</button><button class="action" onclick="rpsMove('Paper')">📄 Paper</button><button class="action" onclick="rpsMove('Scissors')">✂️ Scissors</button></div><button class="action secondary" onclick="launch('rps')">Restart</button>`);window.rpsMove=move=>{if(round>=5||wins===3||loss===3)return;round++;let opp=['Rock','Paper','Scissors'][Math.floor(Math.random()*3)],out=move===opp?'Draw':((move==='Rock'&&opp==='Scissors')||(move==='Paper'&&opp==='Rock')||(move==='Scissors'&&opp==='Paper'))?'You win this round!':'Arcade wins this round!';if(out==='You win this round!')wins++;if(out==='Arcade wins this round!')loss++;$('rpsmsg').textContent=`You chose ${move}; Arcade chose ${opp}. ${out}`;$('rpsstat').textContent=`You ${wins} — ${loss} Arcade`;if(round===5||wins===3||loss===3){$('rpsmsg').textContent+=wins>loss?' 🏆 Match won!':wins<loss?' Match lost!':' Match tied!';if(wins>loss)setBest('rps',+(get('rps')||0)+1);finish(wins>loss?10:2)}}}
+function pong(){openGame('🏓 Pong',`<p>Drag your finger or mouse up/down to move. Keep the ball alive!</p><div class="pong-wrap"><canvas id="pongCanvas" width="460" height="280"></canvas></div><div class="result" id="pongStat">Score: 0</div><button class="action secondary" onclick="launch('pong')">Restart</button>`);let c=$('pongCanvas'),ctx=c.getContext('2d'),py=110,ball={x:230,y:140,vx:4,vy:2.5},score=0,alive=true;function move(e){let r=c.getBoundingClientRect();py=Math.max(0,Math.min(220,(e.clientY-r.top)*280/r.height-30))}c.addEventListener('pointermove',move);cleanup=()=>{alive=false;c.removeEventListener('pointermove',move)};function frame(){if(!alive)return;ctx.clearRect(0,0,460,280);ctx.strokeStyle='#28405e';ctx.setLineDash([5,7]);ctx.beginPath();ctx.moveTo(230,0);ctx.lineTo(230,280);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#66e3ff';ctx.fillRect(18,py,12,60);ctx.fillStyle='#ff76c8';ctx.fillRect(430,Math.max(0,Math.min(220,ball.y-30)),12,60);ctx.beginPath();ctx.arc(ball.x,ball.y,7,0,Math.PI*2);ctx.fillStyle='#ffd36e';ctx.fill();ball.x+=ball.vx;ball.y+=ball.vy;if(ball.y<7||ball.y>273)ball.vy*=-1;if(ball.x<30&&ball.x>20&&ball.y>py&&ball.y<py+60){ball.vx=Math.abs(ball.vx)*1.04;score++;$('pongStat').textContent=`Score: ${score}`}if(ball.x>425&&ball.y>ball.y-30&&ball.y<ball.y+30)ball.vx*=-1;if(ball.x>455){alive=false;$('pongStat').textContent=`Game over! Score: ${score}`;if(score>+(get('pong')||0))setBest('pong',score);finish(score*2);return}if(ball.x<0){ball.x=230;ball.y=140;ball.vx=4;score=Math.max(0,score-1)}requestAnimationFrame(frame)}frame()}
+function snake(){openGame('🐍 Snake',`<p>Use arrow buttons or keyboard arrows. Eat the dot!</p><div class="snake-wrap"><canvas id="snakeCanvas" width="320" height="320"></canvas></div><div class="result" id="snakeStat">Score: 0</div><div class="keypad"><button onclick="snakeDir(0,-1)">⬆️</button><button onclick="snakeDir(-1,0)">⬅️</button><button onclick="snakeDir(0,1)">⬇️</button><button onclick="snakeDir(1,0)">➡️</button></div><button class="action secondary" onclick="launch('snake')">Restart</button>`);let c=$('snakeCanvas'),ctx=c.getContext('2d'),size=16,body=[{x:5,y:5},{x:4,y:5},{x:3,y:5}],dir={x:1,y:0},food={x:10,y:10},score=0,alive=true;window.snakeDir=(x,y)=>{if(x!==-dir.x||y!==-dir.y)dir={x,y}};function key(e){let m={ArrowUp:[0,-1],ArrowDown:[0,1],ArrowLeft:[-1,0],ArrowRight:[1,0]};if(m[e.key]){e.preventDefault();snakeDir(...m[e.key])}}document.addEventListener('keydown',key);cleanup=()=>{alive=false;document.removeEventListener('keydown',key)};timer=setInterval(()=>{if(!alive)return;let h={x:body[0].x+dir.x,y:body[0].y+dir.y};if(h.x<0||h.y<0||h.x>=20||h.y>=20||body.some(p=>p.x===h.x&&p.y===h.y)){clearInterval(timer);timer=null;alive=false;$('snakeStat').textContent=`Game over! Score: ${score}`;if(score>+(get('snake')||0))setBest('snake',score);finish(score*3);return}body.unshift(h);if(h.x===food.x&&h.y===food.y){score++;food={x:Math.floor(Math.random()*20),y:Math.floor(Math.random()*20)};$('snakeStat').textContent=`Score: ${score}`}else body.pop();ctx.fillStyle='#080d1b';ctx.fillRect(0,0,320,320);ctx.fillStyle='#ff76c8';ctx.fillRect(food.x*16+2,food.y*16+2,12,12);body.forEach((p,i)=>{ctx.fillStyle=i?'#66e3ff':'#c7ff76';ctx.fillRect(p.x*16+1,p.y*16+1,14,14)})},130)}
+refresh();
 </script>
 </body>
 </html>
